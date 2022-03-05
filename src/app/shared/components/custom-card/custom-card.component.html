@@ -1,0 +1,58 @@
+<!-- Team -->
+<section id="team" class="pb-5" *ngIf="!loading">
+    <div class="container">
+        <h1 class="section-title h1">OUR TEAM <a routerLink="/persons/create" class="btn btn-primary btn-sm">+</a></h1>
+        <div class="row">
+            <!-- Team member -->
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let person of personsData">
+                <div class="image-flip" >
+                    <div class="mainflip flip-0">
+                        <div class="frontside">
+                            <div class="card">
+                                <div class="card-body text-center">
+                                    <p><img class=" img-fluid" src="{{person.avatar}}" alt="card image"></p>
+                                    <h4 class="card-title">{{person.name}}</h4>
+                                    <p class="card-text">{{person.country}}</p>
+                                    <p class="card-text">{{person.email}}</p>
+                                    Age = <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-warning btn-sm" style="border-radius: 50%;"> {{ person.dob | timeAgo}}</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="backside">
+                            <div class="card">
+                                <div class="card-body text-center mt-4">
+                                    <h4 class="card-title"><a routerLink="/persons/edit/{{person.id}}" target="_blank">{{person.name}}</a></h4>
+                                    <p class="card-text">{{this.description}}</p>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="{{person.avatar}}">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="{{person.avatar}}">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="{{person.avatar}}">
+                                                <i class="fa fa-skype"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="{{person.avatar}}">
+                                                <i class="fa fa-google"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <app-no-availabale-data *ngIf="personsData.length <= 0" [message]="msg"></app-no-availabale-data>          
+        </div>
+    </div>
+</section>
+<!-- Team -->

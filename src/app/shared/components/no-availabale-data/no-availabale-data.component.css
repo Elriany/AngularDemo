@@ -1,0 +1,36 @@
+
+.height-creation{
+    height: 41.5vh;
+  
+  }
+  .doneCreationIcon {
+    width: 20%;
+    height: 87%;
+  }
+  .doneCreationIcon > p {
+    font-size: 1.0625rem;
+   font-family: L-Regular;
+  
+  }
+  .CreationMode .normal-btn {
+    min-width: 7rem;
+  }
+
+  @include breakpoint-down(md) {
+    .doneCreationIcon {
+      width: 40%;
+      height: 67%;
+    }
+    .doneCreationIcon > p {
+      font-size: 1.5rem;
+    }
+  }
+  @include breakpoint-down(sm) {
+    .doneCreationIcon {
+      width: 45%;
+      height: 67%;
+    }
+    .doneCreationIcon > p {
+      font-size: 0.9rem;
+    }
+  }
