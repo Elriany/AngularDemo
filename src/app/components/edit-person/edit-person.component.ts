@@ -19,6 +19,7 @@ export class EditPersonComponent implements OnInit {
   loading: boolean = true;
   person!: IPerson;
   personId!: number;
+
   constructor(private fb : FormBuilder,
     private router: Router, 
     private activatedRoute: ActivatedRoute,   
@@ -40,7 +41,6 @@ export class EditPersonComponent implements OnInit {
   personFormInit() {
     this.personEditForm = this.fb.group(
       {
-        //id: ["", [Validators.required]],
         name: ["", [Validators.required]],
         country: ["", [Validators.required] ],
         email: ["", [Validators.required] ],
@@ -52,31 +52,29 @@ export class EditPersonComponent implements OnInit {
 
   addValuesToForm() {
     let date = new Date(this.person.dob);
-    let latest_date = this.datepipe.transform(date, 'yyyy-MM-dd');
+    let dateOfBirth = this.datepipe.transform(date, 'yyyy-MM-dd');
     this.personEditForm.get("name")!.setValue(this.person.name!);
     this.personEditForm.get("country")!.setValue(this.person.country);
     this.personEditForm.get("email")!.setValue(this.person.email);
     this.personEditForm.get("avatar")!.setValue(this.person.avatar);
-    this.personEditForm.get("dob")!.setValue(latest_date);
-    this.personEditForm.get("id")!.setValue(this.person.id);
+    this.personEditForm.get("dob")!.setValue(dateOfBirth);
   }
 
   submit(): void {
 
     this.loading = true;
 
-    if(this.personEditForm.valid){
+    if(this.personEditForm.valid)
+    {
       let form = this.personEditForm.controls;
-
       let model: IUpdatingPerson = {
-        //id:form['id'].value,
         name: form['name'].value.toString(),
         email: form['email'].value.toString(),
         dob: form['dob'].value.toString(),
         country: form['country'].value.toString(),
         avatar: form['avatar'].value.toString(),
-      };      
-      
+      };
+
       this.subs.add(this._personService.putPerson(model,this.personId).subscribe({
         next: (d) => {},
         error: (err) => { this.loading = false; },
@@ -86,7 +84,9 @@ export class EditPersonComponent implements OnInit {
           }
       }));      
 
-    } else {
+    } 
+    else
+    {
       this.loading = false;
       this.personEditForm.markAllAsTouched();      
     }

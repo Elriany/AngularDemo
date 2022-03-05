@@ -5,14 +5,14 @@ import * as moment from 'moment';
   name: 'timeAgo'
 })
 export class TimeAgoPipe implements PipeTransform {
-  transform(value: any): string {
+  transform(value: any): string
+  {
     let today = moment();
     let birthdate = moment(value);
     let years = today.diff(birthdate, 'years');
     let months = today.subtract(years, 'years').diff(birthdate, 'months');
-    if(months > 0 )
-        years += 1;
+    if(months > 0 ) years += 1;
     let html: string = years + "";
-   return html;
+    return html;
   }
 }

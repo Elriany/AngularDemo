@@ -44,12 +44,11 @@ export class CreatePersonComponent implements OnInit {
   }
 
   submit(): void {
-
     this.loading = true;
 
-    if(this.personForm.valid){
+    if(this.personForm.valid)
+    {
       let form = this.personForm.controls;
-
       let model: ICreatingPerson = {
         name: form['name'].value.toString(),
         email: form['email'].value.toString(),
@@ -66,12 +65,14 @@ export class CreatePersonComponent implements OnInit {
            this.cancel();
           }
       }));      
-
-    } else {
+    } 
+    else
+    {
       this.loading = false;
       this.personForm.markAllAsTouched();      
     }
   }
+
   ngOnDestroy(){
     this.subs.unsubscribe();
   }

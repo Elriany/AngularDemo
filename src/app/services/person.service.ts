@@ -16,10 +16,12 @@ export class PersonService {
   private headers: HttpHeaders;
 
   constructor(private http: HttpClient) { 
+
     this.headers = new HttpHeaders({
       "User-Agent": "googlebot",
       "Content-Type": "application/json"
     });
+    
   }
 
   getPersons(): Observable<IPerson[]> {

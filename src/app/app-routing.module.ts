@@ -4,11 +4,7 @@ import { CreatePersonComponent } from "./components/create-person/create-person.
 import { EditPersonComponent } from "./components/edit-person/edit-person.component";
 import { PersonComponent } from "./components/person/person.component";
 const routes: Routes = [
-    {
-        path: "",
-        redirectTo: '/persons/list',
-        pathMatch: 'full',
-    },
+    { path: "", redirectTo: '/persons/list', pathMatch: 'full'},
     {
         path: "persons/list",
         //canActivate: [AuthGuard],
