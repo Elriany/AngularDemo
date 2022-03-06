@@ -4,24 +4,26 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm i` then `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## SceenShot
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![image](https://user-images.githubusercontent.com/17969269/156920462-428c668c-e1ef-4c99-a5d6-ef52e1c3f093.png)
 
-## Build
+![image](https://user-images.githubusercontent.com/17969269/156920604-187b0bc1-06c9-499b-ae58-ddb7ae094945.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![image](https://user-images.githubusercontent.com/17969269/156920610-9f66ba7a-a95b-44bf-b33e-50b34c9e9bd2.png)
 
-## Running unit tests
+![image](https://user-images.githubusercontent.com/17969269/156920613-c750bf99-6fee-4f7a-b1d6-b9e18feb96c3.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![image](https://user-images.githubusercontent.com/17969269/156920618-f7e0503c-4aa3-4709-8fad-af7c8f993570.png)
 
-## Running end-to-end tests
+![image](https://user-images.githubusercontent.com/17969269/156920676-4e57d26f-72b0-4a9c-905d-3a4133b6ab3d.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![image](https://user-images.githubusercontent.com/17969269/156920669-93474626-55b7-4137-aaf2-b0e17b79d36d.png)
 
-## Further help
+![image](https://user-images.githubusercontent.com/17969269/156920687-f33051e2-da50-4964-878b-0f56664d9f8e.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
