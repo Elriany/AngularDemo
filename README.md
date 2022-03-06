@@ -18,7 +18,7 @@ Run `npm i` then `ng serve` for a dev server. Navigate to `http://localhost:4200
 
 ![image](https://user-images.githubusercontent.com/17969269/156920618-f7e0503c-4aa3-4709-8fad-af7c8f993570.png)
 
-![image](https://user-images.githubusercontent.com/17969269/156920676-4e57d26f-72b0-4a9c-905d-3a4133b6ab3d.png)
+![image](https://user-images.githubusercontent.com/17969269/156923636-b521ba70-bdd4-4be3-9b78-83653932d217.png)
 
 ![image](https://user-images.githubusercontent.com/17969269/156920669-93474626-55b7-4137-aaf2-b0e17b79d36d.png)
 
